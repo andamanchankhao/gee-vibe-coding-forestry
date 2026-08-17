@@ -36,7 +36,9 @@ __pycache__/
 *.pyc
 
 # Instructor documentation about how this whole package was built/verified.
-README.md
+# (README.md is intentionally NOT listed here - that name is reserved for the
+# student-facing landing page GitHub renders on the repo's front page.)
+INSTRUCTOR.md
 
 # OS / editor noise
 .DS_Store
