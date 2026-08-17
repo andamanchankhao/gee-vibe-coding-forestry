@@ -1,0 +1,42 @@
+# This repo is the STUDENT-FACING subset of the course only.
+# Everything below stays out of git on purpose - instructor answer keys,
+# solved notebooks, and the build source (which embeds correct answers
+# directly in the assessment source files) never belong where students
+# can reach them.
+
+# Instructor-only deliverables
+02-notebooks/instructor/
+03-exercises/Answer-Keys.*
+04-assessment/answer-key.md
+
+# Build source and tooling - not something students need, and several of
+# these files embed the pre/post-test answer key directly (isCorrect
+# flags, ANSWER_KEY dict) or the mini-project's Hansen-loss reference value.
+build/
+04-assessment/questions.py
+04-assessment/baseline_questions.py
+04-assessment/make_forms.gs
+04-assessment/make_baseline_form.gs
+04-assessment/gain_score.ipynb
+
+# HTML sources - students receive the rendered PDFs, not the source.
+01-slides/*.html
+01-slides/theme/
+00-setup/*.html
+05-handouts/*.html
+03-exercises/Exercise-Day*.html
+03-exercises/*-fillable.html
+04-assessment/*.html
+
+# Compiled Python bytecode. IMPORTANT: this is not just clutter - importing
+# questions.py or baseline_questions.py (e.g. via make_assessment.py) makes
+# Python cache a compiled .pyc of that exact module, which is trivially
+# decompiled back to source. The answer key must never end up here either.
+__pycache__/
+*.pyc
+
+# Instructor documentation about how this whole package was built/verified.
+README.md
+
+# OS / editor noise
+.DS_Store
